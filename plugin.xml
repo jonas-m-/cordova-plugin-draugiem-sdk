@@ -3,6 +3,8 @@
     <name>DraugiemApi</name>
     <description>SDK for integration with Draugiem.lv social network</description>
 
+    <preference name="APP_ID" />
+
     <js-module name="DraugiemApi" src="www/DraugiemApi.js">
         <clobbers target="cordova.plugins.DraugiemApi" />
     </js-module>
@@ -17,5 +19,32 @@
         <config-file parent="/*" target="AndroidManifest.xml" />
         <source-file src="src/android/DraugiemApi.java" target-dir="src/lv/draugiem/cordova" />
         <framework src="lv.draugiem:AndroidSDK:1.0.1"/>
+    </platform>
+
+    <platform name="ios">
+        <plugins-plist key="DraugiemApi" string="DraugiemApi" />
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="DraugiemApi">
+                <preference name="appId" value="$APP_ID" />
+                <param name="ios-package" value="DraugiemApi" />
+            </feature>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+            <array>
+                <dict>
+                    <key>CFBundleURLSchemes</key>
+                    <array>
+                        <string>dr$APP_ID</string>
+                    </array>
+                </dict>
+            </array>
+        </config-file>
+
+        <header-file src="src/ios/DraugiemApi.h" />
+        <source-file src="src/ios/DraugiemApi.m" />
+
+        <framework src="DraugiemSDK" type="podspec" spec="~> 0.1.2"/>
     </platform>
 </plugin>
