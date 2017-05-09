@@ -6,9 +6,9 @@ exports.ERROR_JSON = 1002;
 exports.ERROR_NO_APP = 1003;
 
 exports.login = function(success, error) {
-    exec(success, error, "DraugiemSDK", "login");
+    exec(success, error, "DraugiemApi", "login");
 };
 
 exports.init = function(apiKey, success, error) {
-    exec(success, error, "DraugiemSDK", "init", [apiKey]);
+    exec(success, error, "DraugiemApi", "init", [apiKey]);
 };

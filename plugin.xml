@@ -1,21 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="cordova-plugin-draugiem-sdk" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>DraugiemSDK</name>
+    <name>DraugiemApi</name>
     <description>SDK for integration with Draugiem.lv social network</description>
 
-    <js-module name="DraugiemSDK" src="www/DraugiemSDK.js">
-        <clobbers target="cordova.plugins.DraugiemSDK" />
+    <js-module name="DraugiemApi" src="www/DraugiemApi.js">
+        <clobbers target="cordova.plugins.DraugiemApi" />
     </js-module>
 
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="DraugiemSDK">
-                <param name="android-package" value="lv.draugiem.cordova.DraugiemSDK" />
+            <feature name="DraugiemApi">
+                <param name="android-package" value="lv.draugiem.cordova.DraugiemApi" />
             </feature>
         </config-file>
 
         <config-file parent="/*" target="AndroidManifest.xml" />
-        <source-file src="src/android/DraugiemSDK.java" target-dir="src/lv/draugiem/cordova" />
+        <source-file src="src/android/DraugiemApi.java" target-dir="src/lv/draugiem/cordova" />
         <framework src="lv.draugiem:AndroidSDK:1.0.1"/>
     </platform>
 </plugin>

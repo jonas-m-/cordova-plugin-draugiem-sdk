@@ -12,7 +12,7 @@ import draugiem.lv.api.AuthCallback;
 import draugiem.lv.api.DraugiemAuth;
 import draugiem.lv.api.User;
 
-public class DraugiemSDK extends CordovaPlugin
+public class DraugiemApi extends CordovaPlugin
 {
 	public static final int ERROR_INIT_NOT_CALLED = 1000;
 	public static final int ERROR_UNKNOWN = 1001;
@@ -77,11 +77,9 @@ public class DraugiemSDK extends CordovaPlugin
 					jsonUser.put("id", user.id);
 					jsonUser.put("age", user.age);
 					jsonUser.put("sex", user.sex);
-					jsonUser.put("name", user.name);
-					jsonUser.put("surname", user.surname);
+					jsonUser.put("name", user.name + " " + user.surname);
 					jsonUser.put("nick", user.nick);
 					jsonUser.put("city", user.city);
-					jsonUser.put("lang", user.lang);
 					jsonUser.put("imageIcon", user.imageIcon);
 					jsonUser.put("imageLarge", user.imageLarge);
 					jsonUser.put("birthday", user.birthday);
