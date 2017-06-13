@@ -1,0 +1,20 @@
+{
+  "name": "cordova-plugin-draugiem-sdk",
+  "version": "1.0.0",
+  "description": "Cordova wrapper plugin for Draugiem.lv mobile SDK",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonas-m-/cordova-plugin-draugiem-sdk.git"
+  },
+  "keywords": [
+    "draugiem",
+    "draugiem.lv",
+    "sdk"
+  ],
+  "author": "jonas@masalskis.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonas-m-/cordova-plugin-draugiem-sdk/issues"
+  },
+  "homepage": "https://github.com/jonas-m-/cordova-plugin-draugiem-sdk#readme"
+}
